@@ -14,10 +14,14 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
+    let sum=0
  if(!array || array.length==0) {
     return 0;
   }
  else
- return (Math.min.apply( null, array )+Math.max.apply( null, array ))/2
+     for(let i=0;i<array.length;i++){
+         sum+=array[i]
+     }
+ return sum/array.length
 }
 
